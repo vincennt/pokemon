@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Error404 from "./pages/Error404";
 import Nav from "./components/nav";
+import "/Users/vins/Documents/konexio/react/poke-context/src/style.css"
 // import { useFormik } from 'formik'
 // import * as Yup from 'yup'
 // import { useState, useEffect } from 'react'

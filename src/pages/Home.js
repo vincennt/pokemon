@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+
 const Home =() =>{
 
      const [state, setState] = useState(null)
@@ -15,19 +16,28 @@ const Home =() =>{
      }
      
      const handleButtonClick = () => {
-        console.log('click');
-  }
-
-     console.log(state.types);
+         const numberContain = randomPokemon()
+         fetch('https://pokeapi.co/api/v2/pokemon/'+numberContain)
+            .then(res => res.json())
+            .then(data => setState(data))
+     }  
+  
+    const randomPokemon=() =>{
+        const randomId=Math.floor(Math.random() * 151) + 1;
+        return randomId
+    }
+    
+    
+    console.log(state.types);
     return (
         
         <div>
-            <img src={state.sprites.front_shiny} alt="img" />
+            <img src={state.sprites.front_default} alt="img" />
             <p>{state.name}</p>
             <p>{state.height}</p>
             <p>{state.weight}</p>
             <>{state.types.map( type =>(<p>type : {type.type.name}</p>))}</>
-            <button onClick={()=>handleButtonClick()}/>
+            <button  onClick={()=>handleButtonClick()}>Random Pokemon</button>
         </div>
     
         )
