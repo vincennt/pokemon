@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-const Nav =()=> 
-    
-            (
+const Nav =()=> {
+    return (
             <div>
                 <ul className="nav">
                     <li className="nav-item">
@@ -15,4 +13,5 @@ const Nav =()=>
                 </ul>
             </div>
         )
+    }
 export default Nav
