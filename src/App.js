@@ -10,7 +10,7 @@ import { BrowserRouter, Switch , Route } from "react-router-dom";
 
 
 const App = () => {
-//  const [state, setstate] = useState(null)
+
   return(
     <>
       <BrowserRouter>
