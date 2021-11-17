@@ -13,6 +13,11 @@ const Home =() =>{
      if(state === null){
          return(<></>)
      }
+     
+     const handleButtonClick = () => {
+        console.log('click');
+  }
+
      console.log(state.types);
     return (
         
@@ -22,6 +27,7 @@ const Home =() =>{
             <p>{state.height}</p>
             <p>{state.weight}</p>
             <>{state.types.map( type =>(<p>type : {type.type.name}</p>))}</>
+            <button onClick={()=>handleButtonClick()}/>
         </div>
     
         )
