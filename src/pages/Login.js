@@ -1,6 +1,9 @@
+import Form from "../components/Form"
 const Login=()=> {
     return(
-    <p>Login</p>
+    <>
+    <Form/>
+    </>
     )
 }
 
